@@ -10,8 +10,6 @@ matrix:
       sudo: true
       
 before_script:
-  - export FLASK_APP="$TRAVIS_BUILD_DIR/autoapp.py"
-  - export FLASK_DEBUG=1
   - cd install_dependencies
   - python install_dependencies.py
   - cd ..
