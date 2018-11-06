@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block content %}
+	<p>
+	 	I will print the dictionary created by
+		the function showObject() in app.py
+		when you visit the /example endpoint
+	</p>
+	{# how to write your html template : http://jinja.pocoo.org/docs/2.10/templates/#template-designer-documentation #}
+		{% for key in objToDisplay %}
+			<p>{{ key }} has value {{ objToDisplay[key] }}</p>
+		{% endfor %}
+
+		<p>List of all connected clients test:</p>
+		<p>This is a test remember to make a table with ID, USERNAME AND LASTTIMELOGGED</p>
+		{% for client in allLoggedClients %}
+			<p>{{client.firstName}} + {{client.lastName}} </p>
+		{% endfor %}
+
+{% endblock %}
+
