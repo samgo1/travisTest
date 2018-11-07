@@ -15,6 +15,5 @@ before_script:
   - cd ..
   
 script:
-  - python run.py
-  - pytest
+  - python run.py && pytest
 
